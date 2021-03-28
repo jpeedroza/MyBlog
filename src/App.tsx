@@ -1,22 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+import { GlobalConfigs, Container } from './styles';
 import { PersonalInfo } from './components/PersonalInfo'
+import { ImageInfo } from './components/ImageInfo'
 
-const GlobalConfigs = createGlobalStyle`
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-  html {
-    font-size: 62,5%;
-  }
-`
 
 export default function App() {
   return (
-    <>
+    <Container>
+      <ImageInfo />
       <PersonalInfo />
       <GlobalConfigs />
-    </>
+    </Container>
   );
 }
